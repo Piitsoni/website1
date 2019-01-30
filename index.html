@@ -7,26 +7,45 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
   <title>Atte Pesonen</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+ $(document).ready(function(){
+   // Add smooth scrolling to all links
+   $("a").on('click', function(event) {
+
+     // Make sure this.hash has a value before overriding default behavior
+     if (this.hash !== "1") {
+       // Prevent default anchor click behavior
+       event.preventDefault();
+
+       // Store hash
+       var hash = this.hash;
+
+       // Using jQuery's animate() method to add smooth page scroll
+       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+       $('html, body').animate({
+         scrollTop: $(hash).offset().top
+       }, 800, function(){
+
+         // Add hash (#) to URL when done scrolling (default click behavior)
+         window.location.hash = hash;
+       });
+     } // End if
+   });
+ });
+ </script>
 </head>
 
 <body>
-  <script src="jquery-3.3.1.min.js">
-  $('a[href*="button"]').on('click', function (e) {
-    e.preventDefault();
-    $('html, body').animate({
-    scrollTop: $($(this).attr('href')).offset().top
-    }, 500, 'linear');
-  });
-  </script>
+
 
   <header id="showcase">
     <h1><span>Hi,</span> I'm Atte Pesonen</h1>
       <p>
         I am a Information processing science student at the University of Oulu, and an aspiring developer.</p>
-<a href="#" class="button"><span>Read More</span></a>
+<a href="#footer-a" class="button" id="button1"><span>Read More</span></a>
   </header>
-
-<img id="atte" src="./imgs/atte.png">
+    <img id="atte" src="./imgs/atte.png">
   <section id="section-a">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos distinctio temporibus dolor sapiente, et modi expedita placeat vero asperiores aliquid, ea ut cum, quo numquam eligendi error voluptas cupiditate iste repellendus exercitationem necessitatibus accusantium consequatur? Autem, dolore. Tempore eos aliquam error, alias nobis sed sunt libero, sit perspiciatis suscipit? Eius eos aut suscipit id sint ab consequatur officiis ducimus obcaecati odit omnis ullam repellat ipsa vitae, consectetur labore facilis minima quaerat, a culpa aperiam alias ea quae excepturi. Tempora neque qui aliquid dolor odit, repellat, voluptatem unde nisi sed, perferendis numquam tempore? Ad pariatur, perferendis commodi in dolorum laudantium molestias.</p>
   </section>
