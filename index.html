@@ -9,30 +9,20 @@
   <title>Atte Pesonen</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
- $(document).ready(function(){
-   // Add smooth scrolling to all links
-   $("a").on('click', function(event) {
-
-     // Make sure this.hash has a value before overriding default behavior
-     if (this.hash !== "1") {
-       // Prevent default anchor click behavior
-       event.preventDefault();
-
-       // Store hash
-       var hash = this.hash;
-
-       // Using jQuery's animate() method to add smooth page scroll
-       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-       $('html, body').animate({
-         scrollTop: $(hash).offset().top
-       }, 800, function(){
-
-         // Add hash (#) to URL when done scrolling (default click behavior)
-         window.location.hash = hash;
-       });
-     } // End if
-   });
- });
+//jQuery smooth scroll
+$(document).ready(function() {
+  $("a").on('click', function(event) {
+    if (this.hash !== "1") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function() {
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
  </script>
 </head>
 
@@ -47,7 +37,7 @@
   </header>
     <img id="atte" src="./imgs/atte.png">
   <section id="section-a">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos distinctio temporibus dolor sapiente, et modi expedita placeat vero asperiores aliquid, ea ut cum, quo numquam eligendi error voluptas cupiditate iste repellendus exercitationem necessitatibus accusantium consequatur? Autem, dolore. Tempore eos aliquam error, alias nobis sed sunt libero, sit perspiciatis suscipit? Eius eos aut suscipit id sint ab consequatur officiis ducimus obcaecati odit omnis ullam repellat ipsa vitae, consectetur labore facilis minima quaerat, a culpa aperiam alias ea quae excepturi. Tempora neque qui aliquid dolor odit, repellat, voluptatem unde nisi sed, perferendis numquam tempore? Ad pariatur, perferendis commodi in dolorum laudantium molestias.</p>
+    <p>Hi, I'm Atte. I'm a student at the university of Oulu and a aspiring developer currently looking for work or trainee positions. I'm ready to sharpen my skills in java and c++ programming, as well as web development. Check out the links below and feel free to contact me. Cheers!</p>
   </section>
 
 <section id="boxes">
